@@ -5,19 +5,20 @@ variable "roles" {
   }))
 
   default = {
+
     dev-ec2-role = {
       service    = "ec2.amazonaws.com"
-      policy_arn = "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"
+      policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ReadOnlyAccess"
     }
 
     dev-lambda-role = {
       service    = "lambda.amazonaws.com"
-      policy_arn = "arn:aws:iam::aws:policy/AWSLambdaBasicExecutionRole"
+      policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
     }
 
     dev-s3-role = {
       service    = "ec2.amazonaws.com"
-      policy_arn = "arn:aws:iam::aws:policy/AmazonS3FullAccess"
+      policy_arn = "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"
     }
 
     dev-cloudwatch-role = {
