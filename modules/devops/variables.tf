@@ -7,7 +7,6 @@ variable "roles" {
   default = {
 
 
-roles = {
   devops-ec2-role = {
     service    = "ec2.amazonaws.com"
     policy_arn = "arn:aws:iam::aws:policy/AmazonEC2FullAccess"
