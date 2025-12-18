@@ -1,3 +1,12 @@
+variable "roles" {
+  type = map(object({
+    service    = string
+    policy_arn = string
+  }))
+
+  default = {
+
+
 roles = {
   devops-ec2-role = {
     service    = "ec2.amazonaws.com"
